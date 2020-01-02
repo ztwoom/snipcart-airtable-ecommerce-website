@@ -1,0 +1,15 @@
+.self-baseline {
+  align-self: baseline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 21.25rem));
+  grid-gap: 1.5rem;
+}
+
+@screen xl {
+  .grid {
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+  }
+}
