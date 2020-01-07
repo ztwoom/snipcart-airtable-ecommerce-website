@@ -4,6 +4,8 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const slugify = str => str.split(" ").join("-");
+
 module.exports = {
   siteName: "Gridsome",
   plugins: [
@@ -23,5 +25,18 @@ module.exports = {
         select: {} // optional
       }
     }
-  ]
+  ],
+  templates: {
+    Product: [
+      {
+        path: node =>
+          `/products/${slugify(node["Product code"])}-${slugify(
+            node["Color cartridge"]
+          )}-${slugify(node["Product name"])}-${slugify(
+            node["Staple size"]
+          )}x${slugify(node["Open staple height"])}`,
+        component: "./src/templates/ProductDetails.vue"
+      }
+    ]
+  }
 };
