@@ -5,31 +5,8 @@
 	</app-shell>
 </template>
 
-<page-query>
-query allProduct {
-  allProduct {
-    edges {
-      node {
-        id
-        productName
-        productCode
-        images {
-          url
-        }
-        stock
-        stapleSize
-        description
-        unitCost
-        colorCartridge
-        expires
-        tissueThickness
-      }
-    }
-  }
-}
-</page-query>
-
 <script>
+	// To do: move current <page-query> to an <static-query> component and fetch only popular products
 	import AppHeroSection from "../components/AppHeroSection";
 	import PopularProducts from "../components/PopularProducts";
 

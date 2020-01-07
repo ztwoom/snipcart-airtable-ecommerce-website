@@ -11,6 +11,9 @@ module.exports = {
         },
         surface: "#F5F5F5",
         "gray-400": "#BDBDBD",
+        "blue-500": "#2196F3",
+        gold: "#FFC400",
+        teal: "#00BFA5",
         "transparent-black": "hsla(0, 0%, 0%, 0.64)"
       },
       minWidth: {
@@ -32,7 +35,9 @@ module.exports = {
       },
       spacing: {
         9: "2.25rem",
-        xs: "1.125rem"
+        xs: "1.125rem",
+        75: "18.75rem",
+        "4-5": "1.125rem"
       }
     },
     container: {

@@ -5,13 +5,13 @@
 				<h1
 					class="text-3xl font-light sm:text-4xl sm:leading-tight tracking-wide"
 				>
-					Brand new Surplus Bariatric Surgical Reloads
+					Bariatric Surgical Reloads
 				</h1>
-				<p class="mt-6 text-xs text-gray-700 tracking-wider">
-					Original factory packaged products with 1 year prior to expiration
-					date
+				<p class="mt-6 text-gray-700 tracking-wider">
+					Original factory packaged products. Expiration (2021-2022)
 				</p>
 				<g-link
+					to="/products"
 					class="inline-flex justify-center items-center rounded bg-primary-dark h-9 px-3 mt-12"
 				>
 					<span class="text-sm text-white uppercase font-medium tracking-wider">

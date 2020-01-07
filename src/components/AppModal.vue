@@ -1,7 +1,7 @@
 <template>
 	<transition name="fade">
 		<div
-			class="fixed z-50 inset-0 bg-transparent-black flex items-center justify-center p-4"
+			class="fixed z-30 inset-0 bg-transparent-black flex items-center justify-center p-4"
 			v-if="isShown"
 			@click="close"
 		>

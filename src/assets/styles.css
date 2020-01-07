@@ -13,3 +13,12 @@
     grid-template-columns: repeat(3, minmax(auto, 1fr));
   }
 }
+
+::selection {
+  background-color: #eee5fd;
+  color: #6002ee;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

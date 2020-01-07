@@ -91,7 +91,7 @@
 					<div
 						class="uppercase text-xs tracking-wider font-medium text-gray-600 h-10 flex items-center"
 					>
-						<g-link class="hover:text-primary-dark">
+						<g-link to="/products" class="hover:text-primary-dark">
 							Product catalog
 						</g-link>
 					</div>
