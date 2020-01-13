@@ -9,7 +9,8 @@
   "dependencies": {
     "@gridsome/source-airtable": "^0.1.4",
     "gridsome": "^0.7.0",
-    "typeface-roboto": "^0.0.75"
+    "typeface-roboto": "^0.0.75",
+    "vue-m-message": "^2.0.0"
   },
   "devDependencies": {
     "gridsome-plugin-tailwindcss": "^2.2.30"
