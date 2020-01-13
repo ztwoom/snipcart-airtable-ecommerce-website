@@ -1,0 +1,20 @@
+{
+    "short_name": "Reloads",
+    "name": "Bariatric Reloads",
+    "icons": [
+        {
+            "src": "/icon-193.png",
+            "type": "image/png",
+            "sizes": "193x193"
+        },
+        {
+            "src": "/icon-513.png",
+            "type": "image/png",
+            "sizes": "513x513"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#6002EE",
+    "display": "standalone",
+    "theme_color": "#6002EE"
+}
