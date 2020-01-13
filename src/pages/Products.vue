@@ -160,6 +160,11 @@ query allProduct {
       }
     }
   }
+  metadata {
+    siteUrl
+    productPageTitle
+    productPageDescription
+  }
 }
 </page-query>
 
@@ -171,7 +176,59 @@ query allProduct {
 	import AppFiltersCheckbox from "../components/AppFiltersCheckbox";
 
 	export default {
+		// Add og image
 		name: "Products",
+		metaInfo() {
+			return {
+				title: this.$page.metadata.productPageTitle,
+				meta: [
+					{
+						name: "title",
+						content: this.$page.metadata.productPageTitle
+					},
+					{
+						name: "description",
+						content: this.$page.metadata.productPageDescription
+					},
+					// og / facebook
+					{
+						property: "og:url",
+						content: `${this.$page.metadata.siteUrl}/products`
+					},
+					{
+						property: "og:title",
+						content: this.$page.metadata.productPageTitle
+					},
+					{
+						property: "og:description",
+						content: this.$page.metadata.productPageDescription
+					},
+					{
+						property: "og:image",
+						content: `${this.$page.metadata.siteUrl}/og-img.jpg`
+					},
+					{ property: "og:type", content: "website" },
+					// twitter
+					{ property: "twitter:card", content: "summary_large_image" },
+					{
+						property: "twitter:url",
+						content: `${this.$page.metadata.siteUrl}/products`
+					},
+					{
+						property: "twitter:title",
+						content: this.$page.metadata.productPageTitle
+					},
+					{
+						property: "twitter:description",
+						content: this.$page.metadata.productPageDescription
+					},
+					{
+						property: "twitter:image",
+						content: `${this.$page.metadata.siteUrl}/og-img.jpg`
+					}
+				]
+			};
+		},
 		data() {
 			return {
 				colors: [],
@@ -247,9 +304,6 @@ query allProduct {
 				).node;
 				this.$refs.modal.open();
 			}
-		},
-		mounted() {
-			// console.log(this.$page.allProduct.edges);
 		}
 	};
 </script>

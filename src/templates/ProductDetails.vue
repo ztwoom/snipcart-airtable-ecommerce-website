@@ -55,60 +55,43 @@
 					>
 						{{ $page.product.description }}
 					</p>
-					<div class="mt-6 flex items-center">
-						<div class="w-10 text-xs text-gray-600 tracking-widest">Qty</div>
-						<div class="flex-grow flex items-center justify-center">
-							<button
-								class="w-12 h-12 hover:bg-surface rounded-full flex items-center justify-center focus:outline-none"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 24 24"
-									class="w-6 h-6 fill-current"
-									aria-label="Pop one out of the cart"
-								>
-									<path fill="none" d="M0 0h24v24H0V0z" />
-									<path d="M19 13H5v-2h14v2z" />
-								</svg>
-							</button>
-							<span
-								class="w-6 h-6 flex justify-center items-center text-gray-700 m-1"
-								>1</span
-							>
-							<button
-								class="w-12 h-12 hover:bg-surface rounded-full flex items-center justify-center focus:outline-none"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 24 24"
-									class="w-6 h-6 fill-current"
-									aria-label="Add one to the cart"
-								>
-									<path fill="none" d="M0 0h24v24H0V0z" />
-									<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-								</svg>
-							</button>
-						</div>
-						<div class="w-10"></div>
-					</div>
+					<section class="mt-6 max-w-md mx-auto lg:max-w-full">
+						<span class="uppercase text-xs tracking-wider font-medium"
+							>Note</span
+						>
+						<span
+							class="text-sm tracking-wider text-gray-600 h-10 flex items-center mt-2"
+						>
+							We guarantee all products are in original factory packaging and in
+							current date.
+						</span>
+					</section>
 					<button
-						class="inline-flex justify-center items-center rounded bg-primary-dark h-9 px-3 mt-4 focus:outline-none w-full"
+						class="snipcart-add-item inline-flex justify-center items-center rounded bg-primary-dark h-9 px-3 mt-10 focus:outline-none w-full"
+						:data-item-name="
+							`${$page.product.productCode} (${$page.product.colorCartridge}) ${$page.product.productName} ${$page.product.stapleSize} x ${$page.product.openStapleHeight}`
+						"
+						:data-item-id="$page.product.id"
+						:data-item-price="$page.product.unitCost"
+						:data-item-url="$page.product.path"
+						:data-item-image="$page.product.images[0].url"
+						:data-item-max-quantity="$page.product.stock"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
-							aria-label="Add to cart"
 							class="fill-current text-white w-xs h-xs mr-2"
+							aria-label="Buy item"
 						>
 							<path fill="none" d="M0 0h24v24H0V0z" />
 							<path
-								d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59L3.62 17H19v-2H7l1.1-2z"
+								d="M17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm0-3l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1v2h2l3.6 7.59L3.62 17H19v-2H7z"
 							/>
 						</svg>
 						<span
 							class="text-sm text-white uppercase font-medium tracking-wider"
 						>
-							Add to cart
+							Buy (${{ $page.product.unitCost }})
 						</span>
 					</button>
 				</div>
@@ -134,12 +117,17 @@
 				</product-detail-list>
 			</section>
 			<section class="mt-16 max-w-md mx-auto lg:max-w-full">
-				<span class="uppercase text-xs tracking-wider font-medium">Note</span>
-				<span
-					class="text-sm tracking-wider text-gray-600 h-10 flex items-center mt-2"
+				<span class="uppercase text-xs tracking-wider font-medium"
+					>Medical disclaimer</span
 				>
-					We guarantee all products are in original factory packaging and in
-					current date.
+				<span
+					class="text-sm tracking-wider text-gray-600 flex items-center mt-2"
+				>
+					The sale of this item may be subject to strict regulation by the U.S.
+					Food and Drug Administration and state and local regulatory agencies.
+					If so, do not bid on this item unless you are an authorized purchaser.
+					If the item is subject to FDA regulation, We will verify your status
+					as an authorized purchaser of this item before shipping.
 				</span>
 			</section>
 		</div>
@@ -149,6 +137,8 @@
 <page-query>
 query($path: String) {
   product(path: $path) {
+	id
+    path
     tissueThickness
     openStapleHeight
     closedStapleHeight
@@ -168,13 +158,75 @@ query($path: String) {
       url
     }
   }
+  metadata {
+	  siteUrl
+  }
 }
-
 </page-query>
 
 <script>
 	export default {
 		name: "ProductDetails",
+		metaInfo() {
+			return {
+				headAttrs: {
+					prefix:
+						"og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#"
+				},
+				title: `${this.$page.product.productCode} (${this.$page.product.colorCartridge}) ${this.$page.product.productName} ${this.$page.product.stapleSize} x ${this.$page.product.openStapleHeight} | $${this.$page.product.unitCost}`,
+				meta: [
+					{
+						name: "title",
+						content: `${this.$page.product.productCode} (${this.$page.product.colorCartridge}) ${this.$page.product.productName} ${this.$page.product.stapleSize} x ${this.$page.product.openStapleHeight} | $${this.$page.product.unitCost}`
+					},
+					{
+						name: "description",
+						content: this.$page.product.description
+					},
+					// og - facebook
+					{
+						property: "og:url",
+						content: `${this.$page.metadata.siteUrl}${this.$page.product.path}`
+					},
+					{
+						property: "og:title",
+						content: `${this.$page.product.productCode} (${this.$page.product.colorCartridge}) ${this.$page.product.productName} ${this.$page.product.stapleSize} x ${this.$page.product.openStapleHeight} | $${this.$page.product.unitCost}`
+					},
+					{
+						property: "og:description",
+						content: this.$page.product.description
+					},
+					{
+						property: "og:image",
+						content: `${this.$page.product.images[0].url}`
+					},
+					{ property: "og:type", content: "og:product" },
+					{
+						property: "product:price:amount",
+						content: `${this.$page.product.unitCost}`
+					},
+					{ property: "product:price:currency", content: "USD" },
+					// twitter
+					{ property: "twitter:card", content: "summary_large_image" },
+					{
+						property: "twitter:url",
+						content: `${this.$page.metadata.siteUrl}${this.$page.product.path}`
+					},
+					{
+						property: "twitter:title",
+						content: `${this.$page.product.productCode} (${this.$page.product.colorCartridge}) ${this.$page.product.productName} ${this.$page.product.stapleSize} x ${this.$page.product.openStapleHeight} | $${this.$page.product.unitCost}`
+					},
+					{
+						property: "twitter:description",
+						content: this.$page.product.description
+					},
+					{
+						property: "twitter:image",
+						content: `${this.$page.product.images[0].url}`
+					}
+				]
+			};
+		},
 		data() {
 			return {
 				currentImg: "",
