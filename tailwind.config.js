@@ -31,7 +31,8 @@ module.exports = {
       inset: {
         "-2": "-0.5rem",
         "-1": "-0.25rem",
-        "-4": "-1rem"
+        "-4": "-1rem",
+        "product-card-h": "18.75rem"
       },
       spacing: {
         9: "2.25rem",
