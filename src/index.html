@@ -2,8 +2,19 @@
 <html ${htmlAttrs} class="font-sans antialiased">
   <head>
     ${head}
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css"
+    />
   </head>
   <body ${bodyAttrs}>
     ${app} ${scripts}
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="MTlkY2Y3ZWUtNzEzOS00ZTJhLWJiYWUtNmU5MjZkZjQ3YjQwNjM3MTI1NjEwMDIxMTk4ODY0"
+    ></div>
+    <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
   </body>
 </html>
