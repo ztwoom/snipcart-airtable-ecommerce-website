@@ -1,28 +1,27 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 const slugify = str => str.split(" ").join("-");
 
+const isProd = process.env.NODE_ENV === "production";
+
 module.exports = {
-  siteName: "Gridsome",
+  siteName: "Bariatric Reloads",
+  siteUrl: "https://bariatricreloads.com",
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",
       options: {
-        tailwindConfig: "./tailwind.config.js"
+        tailwindConfig: "./tailwind.config.js",
+        purgeConfig: {
+          whitelistPatternsChildren: [/^m-message/, /^snipcart/]
+        }
       }
     },
     {
       use: "@gridsome/source-airtable",
       options: {
-        apiKey: "keyHYLBRYsPLrKxBn", // required
-        baseId: "appzNTyqqyjU4byv6", // required
-        tableName: "Product", // required
-        typeName: "Product", // required
-        select: {} // optional
+        apiKey: isProd ? process.env.AT_API_KEY : process.env.DEV_AT_API_KEY,
+        baseId: isProd ? process.env.AT_BASE_ID : process.env.DEV_AT_BASE_ID,
+        tableName: "Product",
+        typeName: "Product"
       }
     }
   ],

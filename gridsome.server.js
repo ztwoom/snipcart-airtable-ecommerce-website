@@ -1,16 +1,28 @@
-// Server API makes it possible to hook into various parts of Gridsome
-// on server-side and add custom data to the GraphQL data layer.
-// Learn more: https://gridsome.org/docs/server-api/
+const globalHeadMetadata = [
+  {
+    key: "indexPageTitle",
+    value: "Original factory packaged Bariatric Surgical reloads products"
+  },
+  {
+    key: "indexPageDescription",
+    value:
+      "We sell original factory packaged Echelon Endopath Bariatric Surgical Reloads products within the US"
+  },
+  {
+    key: "productPageTitle",
+    value: "Product catalog / Shop"
+  },
+  {
+    key: "productPageDescription",
+    value:
+      "Explore our product catalog and filter items by product code, cartridge color or tissue thickness"
+  }
+];
 
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
-module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
-
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-}
+module.exports = function(api) {
+  api.loadSource(store => {
+    globalHeadMetadata.forEach(({ key, value }) =>
+      store.addMetadata(key, value)
+    );
+  });
+};
