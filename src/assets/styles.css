@@ -22,3 +22,14 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+.m-message {
+  background-color: hsla(0, 0%, 11%, 0.95) !important;
+}
+.m-message-icons {
+  @apply hidden;
+}
+.m-message--description {
+  @apply text-sm tracking-wide !important;
+  color: #ffffffbf !important;
+}
