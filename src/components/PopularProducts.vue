@@ -44,7 +44,7 @@
 
 <static-query>
 query allProduct {
-  allProduct(filter: { popular: { eq: true } }, limit: 5) {
+  allProduct {
     edges {
       node {
         id
