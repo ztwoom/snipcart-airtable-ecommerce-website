@@ -104,7 +104,7 @@
 						class="uppercase text-xs tracking-wider font-medium text-gray-600 h-10 flex items-center"
 					>
 						<g-link class="hover:text-primary-dark">
-							+1 212-163-20641
+							786-401-8384
 						</g-link>
 					</div>
 				</li>
