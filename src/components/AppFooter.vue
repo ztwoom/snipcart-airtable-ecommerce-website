@@ -103,9 +103,9 @@
 					<div
 						class="uppercase text-xs tracking-wider font-medium text-gray-600 h-10 flex items-center"
 					>
-						<g-link class="hover:text-primary-dark">
+						<a href="tel:7864018384" class="hover:text-primary-dark">
 							786-401-8384
-						</g-link>
+						</a>
 					</div>
 				</li>
 			</ul>
