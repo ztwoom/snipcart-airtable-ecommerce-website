@@ -120,14 +120,20 @@
 				<span class="uppercase text-xs tracking-wider font-medium"
 					>Medical disclaimer</span
 				>
-				<span
-					class="text-sm tracking-wider text-gray-600 flex items-center mt-2"
-				>
+				<span class="text-sm tracking-wider text-gray-600 block mt-2">
 					The sale of this item may be subject to strict regulation by the U.S.
 					Food and Drug Administration and state and local regulatory agencies.
 					If so, do not bid on this item unless you are an authorized purchaser.
 					If the item is subject to FDA regulation, We will verify your status
 					as an authorized purchaser of this item before shipping.
+				</span>
+				<span class="text-sm tracking-wider text-gray-600 block mt-2">
+					We purchase Surplus Bariatric Reloads in Original factory packaged, In
+					date, Expires, open/ Used , and Repacked. If you have products to
+					sell, please send E-mail to:
+					<a href="mailto:bariatricreloads@gmail.com" class="text-blue-500"
+						>bariatricreloads@gmail.com</a
+					>
 				</span>
 			</section>
 		</div>
