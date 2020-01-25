@@ -44,7 +44,7 @@
 
 <static-query>
 query allProduct {
-  allProduct {
+  allProduct(limit: 5) {
     edges {
       node {
         id
