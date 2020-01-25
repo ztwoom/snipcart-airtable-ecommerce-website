@@ -128,9 +128,7 @@
 					as an authorized purchaser of this item before shipping.
 				</span>
 				<span class="text-sm tracking-wider text-gray-600 block mt-2">
-					We purchase Surplus Bariatric Reloads in Original factory packaged, In
-					date and Used. If you have products to
-					sell, please send E-mail to:
+					We purchase Surplus Bariatric Reloads in Original factory packaged, In date, Expires, If you have products to sell, please send E-mail to: 
 					<a href="mailto:bariatricreloads@gmail.com" class="text-blue-500"
 						>bariatricreloads@gmail.com</a
 					>
