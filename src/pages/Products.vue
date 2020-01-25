@@ -140,7 +140,7 @@
 
 <page-query>
 query allProduct {
-  allProduct(limit: 5) {
+  allProduct {
     edges {
       node {
         id
