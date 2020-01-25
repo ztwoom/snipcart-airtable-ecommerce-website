@@ -16,7 +16,6 @@ query Metadata {
 </static-query>
 
 <script>
-	// Add og and twitter card image
 	import AppHeroSection from "../components/AppHeroSection";
 	import PopularProducts from "../components/PopularProducts";
 
