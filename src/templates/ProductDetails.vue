@@ -65,6 +65,11 @@
 							We guarantee all products are in original factory packaging and in
 							current date.
 						</span>
+						<span
+							class="text-sm tracking-wider text-gray-600 h-10 flex items-center mt-2"
+						>
+							Shipping only within the U.S.
+						</span>
 					</section>
 					<button
 						class="snipcart-add-item inline-flex justify-center items-center rounded bg-primary-dark h-9 px-3 mt-10 focus:outline-none w-full"

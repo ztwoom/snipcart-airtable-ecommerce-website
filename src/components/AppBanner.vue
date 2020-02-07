@@ -12,7 +12,7 @@
 				/>
 			</svg>
 			<span class="text-primary-dark text-xs font-medium tracking-wider ml-2">
-				Free shipping for orders over $1000 - US only
+				Free shipping for orders over $1000
 			</span>
 		</div>
 	</div>
