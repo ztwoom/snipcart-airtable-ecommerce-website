@@ -50,7 +50,7 @@
         </div>
       </g-link>
       <div class="flex justify-between items-center mt-4">
-        <div class="text-sm text-gray-700 tracking-wider">${{ unitCost }}</div>
+        <div class="text-sm font-semibold text-gray-900 tracking-wider">${{ unitCost }}</div>
         <button
           class="inline-flex justify-center items-center rounded h-9 px-2 hover:bg-primary-light focus:outline-none"
           @click="$emit('product:id', id)"
