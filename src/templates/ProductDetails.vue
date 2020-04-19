@@ -46,7 +46,7 @@
 						{{ $page.product.productName }} {{ $page.product.stapleSize }} x
 						{{ $page.product.openStapleHeight }}
 					</div>
-					<div class="text-semibold text-gray-900 tracking-wider mt-4">
+					<div class="text-semibold text-xl text-gray-900 tracking-wider mt-4">
 						${{ $page.product.unitCost }}
 					</div>
 					<p
