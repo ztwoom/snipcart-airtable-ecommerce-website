@@ -42,7 +42,7 @@
         {{ product.productName }} {{ product.stapleSize }} x
         {{ product.openStapleHeight }}
       </g-link>
-      <div class="text-xl text-gray-900 font-semibold tracking-wider mt-4">
+      <div class="text-4xl text-gray-900 font-semibold tracking-wider mt-4">
         ${{ product.unitCost }}
       </div>
       <product-detail-list class="mt-6">
