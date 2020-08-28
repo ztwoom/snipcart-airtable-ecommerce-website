@@ -89,7 +89,7 @@
         </g>
       </svg>
     </g-link>
-    <div class="hidden mx-auto sm:flex">
+    <div class="hidden mx-auto sm:flex items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
