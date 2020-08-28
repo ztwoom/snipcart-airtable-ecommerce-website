@@ -119,7 +119,7 @@
           <p class="text-gray-600 pr-4">Suite 120-206</p>
           <p class="text-gray-600 pr-4">Austin, TX 78750</p>
           <div
-            class="uppercase text-xs tracking-wider font-medium text-gray-600 h-10 flex items-center"
+            class="uppercase text-md tracking-wider font-medium text-gray-600 h-10 flex items-center"
           >
             <a href="tel:7864018384" class="hover:text-primary-dark">786-401-8384</a>
           </div>
