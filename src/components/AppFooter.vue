@@ -2,7 +2,7 @@
   <footer class="bg-surface mt-12">
     <div class="container pt-10 pb-5">
       <ul class="flex flex-col sm:flex-row">
-        <li class="flex-1">
+        <li style="width: 500px">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-5">
             <path
               d="M10.71 4.897l-3.693 8.811h-2.41L2.79 6.677a.966.966 0 00-.542-.774A9.516 9.516 0 000 5.154l.054-.257h3.879a1.062 1.062 0 011.051.9l.96 5.1 2.372-6h2.4m9.441 5.934c.009-2.325-3.216-2.453-3.194-3.492.006-.317.308-.652.966-.738a4.314 4.314 0 012.248.394l.4-1.868a6.087 6.087 0 00-2.132-.391c-2.252 0-3.838 1.2-3.852 2.913-.014 1.268 1.132 1.975 2 2.4.887.432 1.185.709 1.182 1.095-.006.592-.708.851-1.364.862a4.778 4.778 0 01-2.342-.555l-.413 1.931a6.9 6.9 0 002.535.467c2.393 0 3.96-1.181 3.968-3.013m5.948 2.877h2.109l-1.84-8.811H24.43a1.04 1.04 0 00-.97.647l-3.418 8.164h2.392l.467-1.321h2.923zm-2.551-3.121l1.2-3.309.69 3.309zm-9.59-5.69l-1.885 8.811H9.802l1.884-8.811z"
@@ -84,7 +84,7 @@
             </g>
           </svg>
         </li>
-        <li class="mt-6 sm:mt-0 flex-1">
+        <li class="mt-6 sm:mt-0 flex-2 sm:px-6">
           <div class="uppercase text-xs tracking-wider font-medium">Pick/Pack/Ship/Costs</div>
           <!-- <div class="uppercase text-xs tracking-wider font-medium text-gray-600 h-10 flex">
             <g-link to="/products" class="hover:text-primary-dark">Pick/Pack/Ship/Costs</g-link>
@@ -94,41 +94,43 @@
           >Pick, Pack and ship with-in 48 hours of receiving order</p>
           <p
             class="mt-3 text-sm text-gray-600 pr-4"
-          >Domestic delivery only. (NO INTERNATIONAL SHIPMENTS). **</p>
+          >Domestic delivery only. (NO INTERNATIONAL SHIPMENTS). Domestic USA Freight Forward is OK to receive shipment</p>
           <p class="mt-3 text-sm text-gray-600 pr-4">2nd Day Air (2-4 day delivery due to COVID-19)</p>
-          <p class="mt-3 text-sm text-gray-600 pr-4">
-            Calculate your shipping costs: ORDERS OF $1,000.00 OR GREATER:
-            <strong>FREE NO CHARGE.</strong> Orders of $999.99 or less: $50.00
+          <p class="mt-3 text-md text-gray-600 pr-4">
+            <strong>
+              Calculate your shipping costs:
+              <div class="text-white bg-primary-dark">
+                ORDERS OF $1,000.00 OR GREATER:
+                FREE NO CHARGE. Orders of $999.99 or less: $50.00
+              </div>
+            </strong>
           </p>
-          <p
-            class="mt-3 text-sm text-gray-600 pr-4"
-          >** Domestic USA Freight Forward is OK to receive shipment</p>
         </li>
-        <li class="mt-6 sm:mt-0 flex-1">
+        <li class="mt-6 sm:mt-0 flex-2 sm:px-6">
           <div class="uppercase text-xs tracking-wider font-medium">About us</div>
           <p
-            class="mt-3 text-sm text-gray-600 pr-4"
+            class="mt-3 text-md text-gray-600 pr-4"
           >We're a small and specialized company selling only factory perfect in-date Bariatric Reloads. We offer a value to Bariatric Doctors and Surgical Centers by providing a reliable source of high quality Surgical Reloads at BEST PRICING.</p>
         </li>
-        <li class="mt-6 sm:mt-0 flex-1">
+        <li class="mt-6 sm:mt-0 flex-2 sm:px-6 text-md">
           <div class="uppercase text-xs tracking-wider font-medium">Contact us</div>
-          <p class="mt-3 text-sm text-gray-600 pr-4">Bariatric Reloads</p>
-          <p class="text-sm text-gray-600 pr-4">13492 Research Blvd</p>
-          <p class="text-sm text-gray-600 pr-4">Suite 120-206</p>
-          <p class="text-sm text-gray-600 pr-4">Austin, TX 78750</p>
+          <p class="mt-3 text-gray-600 pr-4">Bariatric Reloads</p>
+          <p class="text-gray-600 pr-4">13492 Research Blvd</p>
+          <p class="text-gray-600 pr-4">Suite 120-206</p>
+          <p class="text-gray-600 pr-4">Austin, TX 78750</p>
           <div
             class="uppercase text-xs tracking-wider font-medium text-gray-600 h-10 flex items-center"
           >
             <a href="tel:7864018384" class="hover:text-primary-dark">786-401-8384</a>
           </div>
-          <p class="mt-3 text-sm text-gray-600 pr-4">
+          <p class="mt-3 text-gray-600 pr-4">
             <strong>Working hours:</strong>
           </p>
-          <p class="mt-3 text-sm text-gray-600 pr-4">Mon-Sun 9AM - 8PM</p>
-          <p class="mt-3 text-sm text-gray-600 pr-4">
+          <p class="mt-3 text-gray-600 pr-4">Mon-Sun 9AM - 8PM</p>
+          <p class="mt-3 text-gray-600 pr-4">
             <strong>Email:</strong>
           </p>
-          <p class="mt-3 text-sm text-gray-600 pr-4">
+          <p class="mt-3 text-gray-600 pr-4">
             <a
               href="mailto:bariatricreloads@gmail.com"
               class="text-blue-500"
