@@ -101,7 +101,7 @@
         />
       </svg>
       <span
-        class="text-primary-dark text-sm font-medium tracking-wider ml-2"
+        class="text-primary-dark text-md font-medium tracking-wider ml-2"
       >Free shipping for orders over $1000</span>
     </div>
     <!-- <g-link to="/products" class="ml-10 hidden sm:inline">
