@@ -2,7 +2,6 @@
   <header class="flex items-center h-16 px-4 sticky top-0 bg-white z-20 shadow">
     <g-link to="/">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 555.93 81.72" class="w-64">
-        <title>logo-2</title>
         <g id="Layer_2" data-name="Layer 2">
           <g id="Layer_1-2" data-name="Layer 1">
             <path
