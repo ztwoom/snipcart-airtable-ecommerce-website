@@ -9,7 +9,7 @@ import AppHover from "./components/AppHover";
 import AppModal from "./components/AppModal";
 import Message from "vue-m-message";
 
-export default function(Vue, { router, head, isClient }) {
+export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   head.style.push({
     type: "text/css",

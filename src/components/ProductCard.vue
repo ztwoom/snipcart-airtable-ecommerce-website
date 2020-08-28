@@ -21,9 +21,7 @@
         </button>
       </transition>
       <g-link class="block" :to="path">
-        <div
-          class="min-h-85 bg-surface relative flex items-center justify-center hover:shadow-lg"
-        >
+        <div class="min-h-85 bg-surface relative flex items-center justify-center hover:shadow-lg">
           <img
             :src="image"
             width="220"
@@ -34,16 +32,10 @@
 
           <div
             class="absolute bottom-0 right-0 font-medium uppercase text-xl text-gray-400 mr-4 mb-4 leading-none"
-          >
-            {{ productCode }}
-          </div>
+          >{{ productCode }}</div>
         </div>
-        <div class="text-xs text-gray-600 tracking-wide mt-4">
-          {{ stock }} in stock
-        </div>
-        <div
-          class="text-xl leading-tight mt-1 tracking-wide hover:text-primary-dark"
-        >
+        <div class="text-xs text-gray-600 tracking-wide mt-4">{{ stock }} in stock</div>
+        <div class="text-xl leading-tight mt-1 tracking-wide hover:text-primary-dark">
           {{ productCode }} ({{ colorCartridge }}) {{ productName }}
           {{ stapleSize }} x
           {{ openStapleHeight }}
@@ -55,11 +47,7 @@
           class="inline-flex justify-center items-center rounded h-9 px-2 hover:bg-primary-light focus:outline-none"
           @click="$emit('product:id', id)"
         >
-          <span
-            class="text-sm text-primary-dark uppercase font-medium tracking-wider"
-          >
-            Quick view
-          </span>
+          <span class="text-sm text-primary-dark uppercase font-medium tracking-wider">Quick view</span>
         </button>
       </div>
     </app-hover>
@@ -72,44 +60,44 @@ export default {
   props: {
     id: {
       type: String,
-      required: true
+      required: true,
     },
     path: {
       type: String,
-      required: true
+      required: true,
     },
     image: {
       type: String,
-      required: true
+      required: true,
     },
     productCode: {
       type: String,
-      required: true
+      required: true,
     },
     colorCartridge: {
       type: String,
-      required: true
+      required: true,
     },
     productName: {
       type: String,
-      required: true
+      required: true,
     },
     stapleSize: {
       type: String,
-      required: true
+      required: true,
     },
     openStapleHeight: {
       type: String,
-      required: true
+      required: true,
     },
     stock: {
       type: Number,
-      required: true
+      required: true,
     },
     unitCost: {
       type: Number,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     async addToCart() {
@@ -121,20 +109,20 @@ export default {
           url: this.path,
           image: this.image,
           maxQuantity: this.stock,
-          quantity: 1
+          quantity: 1,
         });
         this.$message({
           message: `Item added to cart`,
-          position: "bottom-left"
+          position: "bottom-left",
         });
       } catch {
         this.$message({
           message: "An error has ocurred",
-          position: "bottom-left"
+          position: "bottom-left",
         });
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -10,7 +10,8 @@
     "@gridsome/source-airtable": "^0.1.4",
     "gridsome": "^0.7.0",
     "typeface-roboto": "^0.0.75",
-    "vue-m-message": "^2.0.0"
+    "vue-m-message": "^2.0.0",
+    "vue-product-zoomer": "^3.0.1"
   },
   "devDependencies": {
     "gridsome-plugin-tailwindcss": "^2.2.30"
