@@ -134,14 +134,14 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener("load", () => {
+    /* window.addEventListener("load", () => {
       Snipcart.store.subscribe(() => {
         this.itemCount = Snipcart.store
           .getState()
           .cart.items.map((item) => item.quantity)
           .reduce((acc, cur) => acc + cur, 0);
       });
-    });
+    }); */
   },
 };
 </script>
