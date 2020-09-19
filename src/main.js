@@ -20,6 +20,15 @@ export default function (Vue, { router, head, isClient }) {
     }
     `
   });
+  head.style.push({
+    type: "text/css",
+    cssText: `
+    .scroller-at-left .thumb-list .responsive-image {
+      height: auto !important;
+    }
+    `
+  });
+
   Vue.use(Message);
   Vue.component("AppShell", AppShell);
   Vue.component("ProductDetailList", ProductDetailList);
