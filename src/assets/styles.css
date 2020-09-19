@@ -33,3 +33,7 @@
   @apply text-sm tracking-wide !important;
   color: #ffffffbf !important;
 }
+
+.scroller-at-left .thumb-list .responsive-image {
+  height: auto !important;
+}
